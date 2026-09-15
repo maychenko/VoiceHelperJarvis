@@ -1,0 +1,6 @@
+SpeechRecognition>=3.10
+pyttsx3>=2.90
+PyAudio>=0.2.13
+wikipedia>=1.4.0
+edge-tts>=6.1.0
+playsound==1.2.2
