@@ -1,10 +1,3 @@
-# main.py
-# Точка входа: запускает Джарвиса.
-# Цикл работы:
-#   1. Слушаем, пока не услышим слово-активатор ("джарвис")
-#   2. Говорим "Да, слушаю" и слушаем команду
-#   3. Ищем подходящий обработчик и выполняем его
-
 from config import WAKE_WORD, EXIT_WORDS
 from speech import speak, listen, setup_voice
 from commands import find_command
@@ -15,7 +8,7 @@ def main():
     speak("Джарвис на связи.")
 
     while True:
-        # Ждём слово-активатор. Короткий phrase_time_limit, чтобы не пропускать реплики.
+
         text = listen(timeout=None, phrase_time_limit=4)
         if not text or WAKE_WORD not in text:
             continue
